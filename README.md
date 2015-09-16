@@ -8,8 +8,6 @@ The Console API wrapper with silent mode and logging depending on the chosen log
 
 ![](http://kechner.name/github/kepek-logger/preview.png)
 
---
-
 ## Installation
 
 ```
