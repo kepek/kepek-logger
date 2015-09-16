@@ -100,7 +100,7 @@ KepekLogger.Levels = [
   'trace',
 ];
 
-module.exports = KepekLogger;
+return KepekLogger;
 
 
 }));
