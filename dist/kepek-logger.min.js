@@ -1,4 +1,4 @@
-/*! kepek-logger - v1.1.1
+/*! kepek-logger - v1.1.2
  *  Release on: 2015-09-16
  *  https://github.com/kepek/kepek-logger
  *  Copyright (c) 2015 
