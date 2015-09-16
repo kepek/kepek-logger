@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/kepek/kepek-logger.png?branch=master)](http://travis-ci.org/kepek/kepek-logger)
 
-Browser console wrapper with silent mode and logging depending on the chosen log level.
+The Console API wrapper with silent mode and logging depending on the chosen log level.
 
 ## Installation
 
