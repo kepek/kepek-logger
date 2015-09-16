@@ -1,5 +1,5 @@
-/*! kepek-logger - v1.1.2
- *  Release on: 2015-09-16
+/*! kepek-logger - v1.1.3
+ *  Release on: 2015-09-17
  *  https://github.com/kepek/kepek-logger
  *  Copyright (c) 2015 
  *  Licensed MIT */
@@ -24,37 +24,36 @@
 var util = require('util');
 
 var KepekLogger = function (options) {
+  var Api, nativeConsole, methods, shouldLog, modifyMethod, prefix, noop;
+
   options = options || {};
-  options.level = options.level || 'debug';
+  options.method = options.method || 'debug';
   options.silent = options.silent || false;
 
   if (!window.console) {
     return null;
   }
 
-  var logger = {},
-    nativeConsole = window.console || {},
-    levels = KepekLogger.Levels,
-    shouldLog = function (level) {
-      return levels.indexOf(level) >= levels.indexOf(options.level);
-    };
+  Api = {};
+  methods = KepekLogger.Methods;
+  nativeConsole = window.console || {};
 
-  levels.forEach(function (level) {
-    logger[level] = function () {
-      if (typeof nativeConsole[level] === 'undefined') {
-        return;
+  noop = function () {};
+
+  shouldLog = function (methodName) {
+    return methods.indexOf(methodName) >= methods.indexOf(options.method);
+  };
+
+  modifyMethod = function (methodName) {
+    Api[methodName] = function () {
+      var method = nativeConsole[methodName];
+
+      if (typeof method === 'undefined') {
+        return noop;
       }
 
-      if (!shouldLog(level) || options.silent === true) {
+      if (!shouldLog(methodName) || options.silent === true) {
         return;
-      }
-
-      var prefix = options.prefix,
-        normalizedLevel;
-
-      switch (level) {
-        case 'fatal': normalizedLevel = 'error'; break;
-        default: normalizedLevel = level;
       }
 
       if (prefix) {
@@ -65,20 +64,21 @@ var KepekLogger = function (options) {
         arguments[0] = util.format(prefix, arguments[0]);
       }
 
-      nativeConsole[normalizedLevel].apply(nativeConsole, arguments);
+      Function.prototype.apply.apply(method, [nativeConsole, arguments]);
     };
-  });
+  };
 
-  return logger;
+  methods.forEach(modifyMethod);
+
+  return Api;
 };
 
-KepekLogger.Levels = [
+KepekLogger.Methods = [
   'debug',
   'log',
   'info',
   'warn',
   'error',
-  'fatal',
   'assert',
   'clear',
   'count',
@@ -97,7 +97,7 @@ KepekLogger.Levels = [
   'timeStamp',
   'timeline',
   'timelineEnd',
-  'trace',
+  'trace'
 ];
 
 return KepekLogger;
