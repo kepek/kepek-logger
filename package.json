@@ -1,6 +1,6 @@
 {
   "name": "kepek-logger",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Browser console wrapper with silent mode and logging depending on the chosen log level.",
   "main": "dist/kepek-logger.js",
   "author": "Michal Kechner <michal@kechner.name>",
