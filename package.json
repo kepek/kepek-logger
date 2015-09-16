@@ -1,0 +1,61 @@
+{
+  "name": "kepek-logger",
+  "version": "1.0.0",
+  "description": "Browser console wrapper with silent mode and logging depending on the chosen log level.",
+  "main": "dist/kepek-logger.js",
+  "author": "Michal Kechner <michal@kechner.name>",
+  "repository": {
+    "url": "https://github.com/kepek/kepek-logger.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-jscs": "^1.1.0",
+    "grunt-lintspaces": "^0.5.1",
+    "jit-grunt": "^0.7.0",
+    "jshint-stylish": "^0.2.0",
+    "load-grunt-config": "^0.10.0",
+    "grunt-umd": "^2.3.0",
+    "time-grunt": "^0.3.2",
+    "grunt-conventional-changelog": "^1.1.0",
+    "grunt-groc": "^0.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/kepek/kepek-logger/issues"
+  },
+  "homepage": "https://github.com/kepek/kepek-logger",
+  "dependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-groc": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-conventional-changelog": "^1.2.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-lintspaces": "^0.5.1",
+    "grunt-jscs": "^1.8.0",
+    "time-grunt": "^0.3.2",
+    "grunt-umd": "^2.3.3",
+    "load-grunt-config": "^0.10.0",
+    "jit-grunt": "^0.7.1",
+    "jshint-stylish": "^0.2.0"
+  },
+  "scripts": {},
+  "keywords": [
+    "console",
+    "browser",
+    "wrapper",
+    "silent",
+    "levels"
+  ]
+}

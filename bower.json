@@ -1,0 +1,23 @@
+{
+  "name": "Logger",
+  "version": "0.0.0",
+  "description": "Browser console wrapper with silent mode and logging depending on the chosen log level.",
+  "main": "dist/Logger.js",
+  "author": {
+    "name": "Michal Kechner",
+    "email": "michal@kechner.name"
+  },
+  "repository": {
+    "url": "https://github.com/kepek/kepek-logger.git",
+    "type": "git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
