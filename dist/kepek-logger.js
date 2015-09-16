@@ -23,7 +23,7 @@
 
 var util = require('util');
 
-var Logger = function (options) {
+var KepekLogger = function (options) {
   options = options || {};
   options.level = options.level || 'debug';
   options.silent = options.silent || false;
@@ -34,7 +34,7 @@ var Logger = function (options) {
 
   var logger = {},
     nativeConsole = window.console || {},
-    levels = Logger.Levels,
+    levels = KepekLogger.Levels,
     shouldLog = function (level) {
       return levels.indexOf(level) >= levels.indexOf(options.level);
     };
@@ -72,7 +72,7 @@ var Logger = function (options) {
   return logger;
 };
 
-Logger.Levels = [
+KepekLogger.Levels = [
   'debug',
   'log',
   'info',
@@ -100,7 +100,7 @@ Logger.Levels = [
   'trace',
 ];
 
-module.exports = Logger;
+module.exports = KepekLogger;
 
 
 }));
