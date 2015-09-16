@@ -1,6 +1,6 @@
 # kepek-logger
 
-[![Build Status](https://secure.travis-ci.org/kepek/Logger.png?branch=master)](http://travis-ci.org/kepek/Logger)
+[![Build Status](https://secure.travis-ci.org/kepek/kepek-logger.png?branch=master)](http://travis-ci.org/kepek/kepek-logger)
 
 Browser console wrapper with silent mode and logging depending on the chosen log level.
 
