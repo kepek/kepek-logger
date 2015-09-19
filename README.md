@@ -63,6 +63,11 @@ prefix: function () {
 
 Support browser native console API. See https://goo.gl/QC43CC for more details.
 
+## Articles
+
+- [What I really get frustrated by is that I cannot wrap console.* and preserve line numbers](https://gist.github.com/paulirish/c307a5a585ddbcc17242)
+- [Blackbox JavaScript Source Files](https://developer.chrome.com/devtools/docs/blackboxing)
+
 ## License
 
 MIT
